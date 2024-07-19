@@ -3,27 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="icon" href="Site Icon Link"> -->
+    <link rel="icon" href="./images/site-icon.svg"> 
     <link rel="stylesheet" href="./css/main.css">
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
     <title>Site Title</title>
 </head>
 <body>
-    <header class="site-header">
+    <!-- Site Header Start -->
+    <header class="site-header" data-aos="fade-down">
         <div class="container">
-            <div class="header"></div>
+            <div class="header">
+                <a href="#" data-aos="fade-right"><img src="./images/site-logo.svg" alt="" width="139" height="20"></a>
+                <ul class="header__list">
+                    <li class="header__item" data-aos="fade-right">
+                        <a class="header__text-link" href="#">Home</a>
+                    </li>
+                    <li class="header__item" data-aos="fade-down">
+                        <a class="header__text-link" href="#bank">About</a>
+                    </li>
+                    <li class="header__item" data-aos="fade-up">
+                        <a class="header__text-link" href="#footer">Contact</a>
+                    </li>
+                    <li class="header__item" data-aos="fade-down">
+                        <a class="header__text-link" href="#article">Blog</a>
+                    </li>
+                    <li class="header__item" data-aos="fade-left">
+                        <a class="header__text-link" href="#article">Careers</a>
+                    </li>
+                </ul>
+                <a class="header__link" href="#" data-aos="fade-left">Request Invite</a>
+                <button onclick="handleMenuIconClick()" class="hamburger-icon"><img src="./images/hamburger-icon.svg" alt="hamburger Icon" width="24" height="11"></button>
+            </div>
         </div>
-    </header>
+    </header> 
+    <div class="modal-wrapper">
+        <div class="modal">
+            <a class="modal__link" href="#">Home</a>
+            <a class="modal__link" href="#bank">About</a>
+            <a class="modal__link" href="#footer">Contact</a>
+            <a class="modal__link" href="#article">Blog</a>
+            <a class="modal__link" href="#article">Careers</a>
+        </div>
+    </div>
+    <!-- Site Header End -->
     <main class="site-main">
+        <!-- Hero Section Start -->
         <section class="hero-section">
             <div class="container">
-                <div class="hero"></div>
+                <div class="hero">
+                    <div class="hero__content-wrapper" data-aos="fade-right"> 
+                        <h1 class="hero__title" data-aos="fade-down">Next generation digital banking</h1>
+                        <p class="hero__text">Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more.</p>
+                        <a class="hero__link" href="#">Request Invite</a>
+                    </div>
+                    <img data-aos="fade-up" class="hero__content-img" src="./images/hero-img.png" alt="Hero Img" width="728" height="900">
+                    <img data-aos="fade-up" class="hero__mobile-img" src="./images/hero-mobile-img.png" alt="Hero Mobile Img" width="327" height="402">
+                </div>
+            </div>
+        </section>  
+        <!-- Hero Section End -->
+        <!-- Bank Section Start -->
+        <section class="bank-section" id="bank">
+            <div class="container bank">
+                <div class="bank__texts-wrapper" data-aos="fade-right">
+                    <h2 class="bank__title">Why choose Easybank?</h2>
+                    <p class="bank__text">We leverage Open Banking to turn your bank account into your financial hub. Control your finances like never before.</p>
+                </div>
+                <ul class="bank__list">
+                    <li class="bank__item" data-aos="fade-right">
+                        <div class="bank__img-wrapper">
+                            <img src="./images/bank-icon1.svg" alt="Bank Icon" width="40" height="40">
+                        </div>
+                        <div class="bank__item-texts-wrapper">
+                            <strong class="bank__strong">Online Banking</strong>
+                            <p class="bank__item-text">Our modern web and mobile applications allow you to keep track of your finances wherever you are in the world.</p>
+                        </div>
+                    </li>
+                    <li class="bank__item" data-aos="fade-up">
+                        <div class="bank__img-wrapper">
+                            <img src="./images/bank-icon2.svg" alt="Bank Icon" width="40" height="40">
+                        </div>
+                        <div class="bank__item-texts-wrapper">
+                            <strong class="bank__strong">Simple Budgeting</strong>
+                            <p class="bank__item-text">See exactly where your money goes each month. Receive notifications when you’re close to hitting your limits.</p>
+                        </div>
+                    </li>
+                    <li class="bank__item" data-aos="fade-down">
+                        <div class="bank__img-wrapper">
+                            <img src="./images/bank-icon3.svg" alt="Bank Icon" width="40" height="40">
+                        </div>
+                        <div class="bank__item-texts-wrapper">
+                            <strong class="bank__strong">Fast Onboarding</strong>
+                            <p class="bank__item-text">We don’t do branches. Open your account in minutes online and start taking control of your finances right away.</p>
+                        </div>
+                    </li>
+                    <li class="bank__item" data-aos="fade-left">
+                        <div class="bank__img-wrapper">
+                            <img src="./images/bank-icon4.svg" alt="Bank Icon" width="40" height="40">
+                        </div>
+                        <div class="bank__item-texts-wrapper">
+                            <strong class="bank__strong">Open API</strong>
+                            <p class="bank__item-text">Manage your savings, investments, pension, and much more from one account. Tracking your money has never been easier.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>  
+        <!-- Bank Section End -->
+        <!-- Article Section Start-->
+        <section class="article-section" id="article">
+            <div class="container article">
+                <h2 class="article__title">Latest Articles</h2>
+                <ul class="article__list">
+                    <li class="article__item" data-aos="flip-left">
+                        <img data-aos="zoom-in-right"
+                        data-aos-offset="300"
+                        data-aos-easing="ease-in-sine"
+                        class="article__img" src="./images/article-img1.png" alt="Article Img" width="255px" height="200">
+                        <strong class="article__name">By Claire Robinson</strong>
+                        <div class="article__texts-wrapper">
+                            <blockquote class="article__quote" site="By Claire Robinson">Receive money in any currency with no fees</blockquote>
+                            <p class="article__text">The world is getting smaller and we’re becoming more mobile. So why should you be forced to only receive money in a single …</p>
+                        </div>
+                    </li>
+                    <li class="article__item" data-aos="flip-down">
+                        <img data-aos="zoom-in-bottom" class="article__img" src="./images/article-img2.png" alt="Article Img" width="255px" height="200">
+                        <strong class="article__name">By Wilson Hutton</strong>
+                        <div class="article__texts-wrapper">
+                            <blockquote class="article__quote" site="By Claire Robinson">Treat yourself without worrying about money</blockquote>
+                            <p class="article__text">Our simple budgeting feature allows you to separate out your spending and set realistic limits each month. That means you …</p>
+                        </div>
+                    </li>
+                    <li class="article__item" data-aos="flip-up">
+                        <img data-aos="zoom-in-bottom" class="article__img" src="./images/article-img3.png" alt="Article Img" width="255px" height="200">
+                        <strong class="article__name">By Wilson Hutton</strong>
+                        <div class="article__texts-wrapper">
+                            <blockquote class="article__quote" site="By Claire Robinson">Take your Easybank card wherever you go</blockquote>
+                            <p class="article__text">We want you to enjoy your travels. This is why we don’t charge any fees on purchases while you’re abroad. We’ll even show you …</p>
+                        </div>
+                    </li>
+                    <li class="article__item" data-aos="flip-right">
+                        <img data-aos="zoom-in-left"
+                        data-aos-offset="300"
+                        data-aos-easing="ease-in-sine"
+                        class="article__img" src="./images/article-img4.png" alt="Article Img" width="255px" height="200">
+                        <strong class="article__name">By Claire Robinson</strong>
+                        <div class="article__texts-wrapper">
+                            <blockquote class="article__quote" site="By Claire Robinson">Our invite-only Beta accounts are now live!</blockquote>
+                            <p class="article__text">After a lot of hard work by the whole team, we’re excited to launch our closed beta. It’s easy to request an invite through the site ...</p>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </section>
+        <!-- Article Section End-->
+        <!-- Site Footer Start -->
+        <footer class="site-footer" id="footer">
+            <div class="container">
+                <div class="footer">
+                    <div class="footer__content-wrapper">
+                        <div data-aos="zoom-in-right">
+                            <a href="#"><img class="footer__logo" src="./images/footer-logo.svg" alt="Site logo" width="139" height="20"></a>
+                            <div class="footer__icon-wrapper">
+                                <a href="https://www.facebook.com/"><img src="./images/facebook-icon.svg" alt="Facebook Icon" width="20" height="20"></a>
+                                <a href="https://www.youtube.com/"><img src="./images/youtube-icon.svg" alt="Facebook Icon" width="20" height="20"></a>
+                                <a href="https://x.com/?lang=ru"><img src="./images/twitter-icon.svg" alt="Facebook Icon" width="20" height="20"></a>
+                                <a href="https://www.pinterest.com/"><img src="./images/pinterest-icon.svg" alt="Facebook Icon" width="20" height="20"></a>
+                                <a href="https://www.instagram.com/"><img src="./images/instagram-icon.svg" alt="Facebook Icon" width="20" height="20"></a>
+                            </div>
+                        </div>
+                        <div class="footer__content-wrapper1" data-aos="flip-up">
+                            <a class="footer__text-link" href="#bank">About Us</a>
+                            <a class="footer__text-link" href="#footer">Contact</a>
+                            <a class="footer__text-link" href="#article">Blog</a>
+                        </div>
+                        <div class="footer__content-wrapper2" data-aos="flip-up">
+                            <a class="footer__text-link" href="#article">Careers</a>
+                            <a class="footer__text-link" href="#footer">Support</a>
+                            <a class="footer__text-link" href="#footer">Privacy Policy</a>
+                        </div>
+                        
+                    </div>
+                    <div class="foooter__link-wrapper" data-aos="zoom-in-left">
+                        <a class="footer__link" href="#">Request Invite</a>
+                        <strong class="footer__strong">© Easybank. All Rights Reserved</strong>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Site Footer End -->
     </main>
     <footer class="site-footer">
         <div class="container">
             <div class="footer"></div>
         </div>
     </footer>
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

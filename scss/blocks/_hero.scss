@@ -1,5 +1,186 @@
-.hero-section {
+.hero-section{
+    padding: 250px 0 170px;
+    position: relative;
+    background-image: url(../images/hero-bg.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: auto 956px;
 }
-
 .hero {
+    @include Display($items:center, $space:space-between, $gap:0px);
 }
+.hero__content-wrapper {
+    width: 447px;
+}
+.hero__title {
+    margin-bottom: 24px;
+    font-family: Public Sans;
+    font-size: 56px;
+    font-weight: 100;
+    line-height: 64px;
+    letter-spacing: -1px;
+    color: $darkblue-clr;
+}
+.hero__text {
+    margin-bottom: 36px;
+    font-family: Public Sans;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: -0.28125px;
+    color: $gray-clr;
+}
+.hero__link {
+    display: inline-block;
+    width: 163px;
+    padding: 8px 0;
+    background: linear-gradient(135deg, #33D35E 0%, #2AB6D9 99.58%);
+    border: 1px solid $green-clr;
+    border-radius: 30px;
+    font-family: Public Sans;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 28px;    
+    color: $white-clr;
+    text-align: center;
+    transition: all 0.3s linear;
+    
+    &:hover{
+        background: transparent;
+        border-color: $green-clr;
+        color: $green-clr;
+    }
+    &:active{
+        box-shadow: 0 0 10px 2px $green-clr;
+    }
+}
+.hero__content-img{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.hero__mobile-img{
+    display: none;
+}
+// Responsive Start
+// Tablet Start
+@media(max-width:1490px){
+    .hero-section{
+        background-size: auto;
+    }
+}
+@media(max-width:1200px){
+    .hero-section{
+        background-image: url(/images/hero-mobile-bg.png);
+        background-position: center top;
+        background-size: auto;
+    }
+    .hero {
+        @include Display($items:center, $space:start, $gap:0px);
+        flex-direction: column-reverse;
+    }
+    .hero__content-img{
+        display: none;
+    }
+    .hero__mobile-img{
+        display: inline-block;
+        position: absolute;
+        top: 0;
+    }
+    .hero__title{
+        margin-bottom: 16px;
+        font-size: 40px;
+        font-weight: 100;
+        line-height: 47px;
+        letter-spacing: -0.7142857313156128px;
+        text-align: center;
+    }
+    .hero__text{
+        margin-bottom: 32px;
+        font-size: 15px;
+        line-height: 25px;
+        letter-spacing: -0.234375px;
+        text-align: center;
+    }
+    .hero__content-wrapper {
+        width: 327px;
+        margin-top: 124px;
+    }
+    .hero__link{
+        display: block;
+        margin: 0 auto;
+    }
+}
+@media(max-width:376px){
+    .hero-section{
+        background-size: 280px;
+    }
+    .hero__title{
+        margin-bottom: 10px;
+        font-size: 27px;
+        font-weight: 100;
+        line-height: 40px;
+        letter-spacing: -0.7142857313156128px;
+        text-align: center;
+    }
+    .hero__text{
+        margin-bottom: 20px;
+        font-size: 13px;
+        line-height: 25px;
+        letter-spacing: -0.234375px;
+        text-align: center;
+    }
+    .hero__content-wrapper {
+        width: 300px;
+        margin-top: 124px;
+    }
+    .hero__link{
+        display: block;
+        margin: 0 auto;
+        width: 140px;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+    .hero__mobile-img{
+        width: 280px;
+        height: 370px;
+    }
+}
+@media(max-width:300px){
+    .hero-section{
+        background-size: 240px;
+    }
+    .hero__title{
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-weight: 100;
+        line-height: 30px;
+        letter-spacing: -0.7142857313156128px;
+        text-align: center;
+    }
+    .hero__text{
+        margin-bottom: 20px;
+        font-size: 10px;
+        line-height: 22px;
+        letter-spacing: -0.234375px;
+        text-align: center;
+    }
+    .hero__content-wrapper {
+        width: 220px;
+        margin-top: 20px;
+    }
+    .hero__link{
+        display: block;
+        margin: 0 auto;
+        width: 125px;
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+    .hero__mobile-img{
+        width: 215px;
+        height: 250px;
+    }
+}
+// Tablet End
+// Responsive End

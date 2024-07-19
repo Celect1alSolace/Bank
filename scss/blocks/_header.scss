@@ -1,4 +1,107 @@
 .site-header {
+    padding: 30px 0;
+    position: fixed;
+    z-index: 52;
+    background-color: $white-clr;
+    top: 0;
+    width: 100%;
 }
 .header {
+    @include Display($items:center, $space:space-between, $gap:0px);
 }
+.header__list {
+    @include Display($items:center, $space:start, $gap:30px);
+}
+.header__text-link {
+    font-family: Public Sans;
+    font-size: 14px;
+    line-height: 16.41px;
+    letter-spacing: -0.10769230872392654px;
+    color: $gray-clr;
+}
+.header__link {
+    display: inline-block;
+    width: 163px;
+    padding: 8px 0;
+    background: linear-gradient(135deg, #33D35E 0%, #2AB6D9 99.58%);
+    border: 1px solid $green-clr;
+    border-radius: 30px;
+    font-family: Public Sans;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 28px;
+    color: $white-clr;
+    text-align: center;
+    transition: all 0.3s linear;
+    
+    &:hover{
+        background: transparent;
+        border-color: $green-clr;
+        color: $green-clr;
+    }
+    &:active{
+        box-shadow: 0 0 10px 2px $green-clr;
+    }
+}
+.hamburger-icon{
+    display: none;
+}
+.modal-wrapper {
+    display: none;
+}
+// Responsive Start
+// Tablet Start
+@media(max-width:750px){
+    .site-header {
+        padding: 22px 0;
+    }
+    .header__list {
+        display: none;
+    }
+    .header__link{
+        display: none;
+    }
+    .hamburger-icon{
+        display: inline-block;
+        border: none;
+        background-color: transparent;
+    }
+    .modal-wrapper {
+        transition: all 0.3s;
+        transform: scale(0);
+        display: inline-block;
+        padding: 88px 24px 0 24px;
+        position: fixed;    
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        z-index: 49;
+        margin: auto;
+        background: linear-gradient(180deg, #2D314D 0%, rgba(45, 49, 77, 0.0001) 100%);
+    }
+    .modal {
+        width: 30vh;
+        margin: 0 auto;
+        padding: 32px 0;
+        height: 256px;
+        background-color: $white-clr;
+        border-radius: 5px;
+    }
+    .modal__link {
+        display: block;
+        font-family: Public Sans;
+        font-size: 18px;
+        line-height: 21.09px;
+        letter-spacing: -0.13846154510974884px;
+        text-align: center;
+        color: $darkblue-clr;  
+    }
+    .modal__link + .modal__link{
+        margin-top: 24px;
+    }
+    .show{
+        transform: scale(1);
+    }
+}
+// Tablet End
+// Responsive End
