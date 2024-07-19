@@ -1,6 +1,14 @@
 let elModalWrapper = document.querySelector(".modal-wrapper")
-let elModal = document.querySelector(".modal")
+let elClose = document.querySelector(".close-icon")
+let elHamburger = document.querySelector(".hamburger-icon")
 
-function handleMenuIconClick(){
-    elModalWrapper.classList.toggle("show")
+function handleMenuIconOpen(){
+    elModalWrapper.classList.add("show")
+    elClose.classList.add("close-show")
+    elHamburger.classList.add("hide")
+}
+function handleMenuIconClose(){
+    elModalWrapper.classList.remove("show")
+    elClose.classList.remove("close-show")
+    elHamburger.classList.remove("hide")
 }

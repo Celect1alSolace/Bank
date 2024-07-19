@@ -46,9 +46,18 @@
 .hamburger-icon{
     display: none;
 }
+.close-icon{
+    display: none;
+    border: none;
+    background-color: transparent;
+}
 .modal-wrapper {
     display: none;
 }
+.hide{
+    transform: scale(0);
+}
+
 // Responsive Start
 // Tablet Start
 @media(max-width:750px){
@@ -65,6 +74,12 @@
         display: inline-block;
         border: none;
         background-color: transparent;
+    }
+    .close-icon{
+        display: none;
+    }
+    .close-show{
+        display: inline-block;
     }
     .modal-wrapper {
         transition: all 0.3s;
