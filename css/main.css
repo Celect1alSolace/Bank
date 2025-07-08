@@ -162,6 +162,61 @@ body
     background: #c45e82;
 }
 
+.popup {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.popup.show {
+    display: flex;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    max-height: 80vh;
+    width: 90%;
+    max-width: 400px;
+    overflow-y: auto;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.popup-content h2 {
+    margin-bottom: 15px;
+    color: #c0392b;
+}
+
+.popup-content ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.popup-content ul li {
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #555;
+}
+
+.popup-content button {
+    margin: 10px 5px 0 5px;
+    padding: 10px 20px;
+    border: none;
+    background: #f8c8dc;
+    color: #333;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
 
 /* На телефоне размеры до 600px */
 @media (max-width: 600px) {
@@ -198,6 +253,47 @@ body
         width: 100%;
         height: 100%;
     }
+    #historyPopup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90vw;
+        max-height: 60vh;
+        padding: 20px;
+        font-size: 0.95em;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.3);
+        z-index: 9999;
+        overflow-y: auto;
+    }
+    
+    
+    #historyPopup h2 {
+        font-size: 1.2em;
+    }
+    
+    #historyList li {
+        font-size: 0.95em;
+    }
+    
+    #historyPopup button {
+        font-size: 1em;
+        padding: 8px 12px;
+        margin-top: 10px;
+    }
+    #historyBtn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 0px;   /* было больше — сделали меньше */
+        height: auto;
+        cursor: pointer;
+        z-index: 9999;
+        opacity: 0.9;
+    }
+    
 }
 
 

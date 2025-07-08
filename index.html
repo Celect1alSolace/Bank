@@ -64,6 +64,20 @@
             
         </div>
     </div>
+
+    <!-- Кнопка-иконка истории (можно поставить внизу экрана) -->
+    <img src="./images/history.png" id="historyBtn" style="position: fixed; bottom: 20px; right: 20px; width: 50px; cursor: pointer; z-index: 1000;" alt="History">
+    
+    <!-- Всплывающее окно истории -->
+    <div id="historyPopup" class="popup">
+        <div class="popup-content">
+            <h2>📜 Yutuqlar tarixi</h2>
+            <ul id="historyList"></ul>
+            <button id="clearHistory">🗑 Tozalash</button>
+            <button id="closeHistory">❌ Yopish</button>
+        </div>
+    </div>
+    
     
     <!-- Скрипт колесо -->
     <script src="./js/main.js"></script>
