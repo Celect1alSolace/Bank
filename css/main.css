@@ -117,22 +117,52 @@ body
     font-weight: 500;
 }
 
-/* На телефоне размеры до 600px */
-@media (max-width: 600px) {
-    .container {
-        width: 90vw;
-        height: 90vw;
-    }
-    .container .wheel {
-        width: 100%;
-        height: 100%;
-    }
-    .container .spinBtn {
-        width: 14vw;
-        height: 14vw;
-        font-size: 4vw;
-    }
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5); /* затемнение */
+    backdrop-filter: blur(4px); /* лёгкий блюр */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
 }
+
+.overlay.show {
+    display: flex;
+}
+
+.result-popup {
+    background: rgba(255, 240, 245, 0.95);
+    padding: 30px 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    max-width: 90vw;
+    text-align: center;
+    color: #333;
+    font-size: 1.3em;
+}
+
+.result-popup button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background: #db7093;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: bakground 0.3s ease;
+}
+
+.result-popup button:hover {
+    background: #c45e82;
+}
+
+
 /* На телефоне размеры до 600px */
 @media (max-width: 600px) {
     .container {

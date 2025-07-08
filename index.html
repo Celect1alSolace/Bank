@@ -37,6 +37,15 @@
     <div class="greeting">
         <h1>Tug'ilgan kuningiz bilan tabriklayman, oyijonim!</h1>
     </div>
+    
+    <div class="overlay" id="overlay">
+        <div class="result-popup" id="resultPopup">
+            <p id="resultText"></p>
+            <button id="claimBtn">Olish 🌸</button>
+        </div>
+    </div>
+    
+    
     <!-- Анимированный фон -->
     <canvas id="sakura"></canvas>
     
@@ -75,7 +84,7 @@
             petals.push({
                 x: Math.random() * canvas.width,
                 y: Math.random() * canvas.height,
-                speed: 1 + Math.random() * 2,
+                speed: 1 + Math.random() * 0.7,
                 size: 15 + Math.random() * 20,
                 drift: Math.random() * 2 - 1
             });
