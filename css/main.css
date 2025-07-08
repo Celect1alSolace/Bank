@@ -121,3 +121,36 @@ body
     font-size: 0.75em;
     font-weight: 500;
 }
+
+/* На телефоне размеры до 600px */
+@media (max-width: 600px) {
+  .container {
+    width: 90vw;
+    height: 90vw;
+  }
+  .container .wheel {
+    width: 100%;
+    height: 100%;
+  }
+  .container .spinBtn {
+    width: 14vw;
+    height: 14vw;
+    font-size: 4vw;
+  }
+}
+/* На телефоне размеры до 600px */
+@media (max-width: 600px) {
+  .container {
+    width: 90vw;
+    height: 90vw;
+  }
+  .container .wheel {
+    width: 100%;
+    height: 100%;
+  }
+  .container .spinBtn {
+    width: 14vw;
+    height: 14vw;
+    font-size: 4vw;
+  }
+}
