@@ -10,7 +10,33 @@
 </head>
 <body>
     <!-- Site Header Start -->
-    
+    <header class="site-header" data-aos="fade-down">
+        <div class="container">
+            <div class="header">
+                <a href="#" data-aos="fade-right"><img src="./images/site-logo.svg" alt="" width="139" height="20"></a>
+                <ul class="header__list">
+                    <li class="header__item" data-aos="fade-right">
+                        <a class="header__text-link" href="#">Home</a>
+                    </li>
+                    <li class="header__item" data-aos="fade-down">
+                        <a class="header__text-link" href="#bank">About</a>
+                    </li>
+                    <li class="header__item" data-aos="fade-up">
+                        <a class="header__text-link" href="#footer">Contact</a>
+                    </li>
+                    <li class="header__item" data-aos="fade-down">
+                        <a class="header__text-link" href="#article">Blog</a>
+                    </li>
+                    <li class="header__item" data-aos="fade-left">
+                        <a class="header__text-link" href="#article">Careers</a>
+                    </li>
+                </ul>
+                <a class="header__link" href="#" data-aos="fade-left">Request Invite</a>
+                <button onclick="handleMenuIconOpen()" class="hamburger-icon"><img src="./images/hamburger-icon.svg" alt="hamburger Icon" width="24" height="11"></button>
+                <button onclick="handleMenuIconClose()" class="close-icon"><img src="./images/close-icon.svg" alt="hamburger Icon" width="18" height="19"></button>
+            </div>
+        </div>
+    </header> 
     <div class="modal-wrapper">
         <div class="modal">
             <a class="modal__link" href="#">Home</a>
